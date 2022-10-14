@@ -1,4 +1,8 @@
 package constants;
 
-public abstract class Constants {
+public interface Constants {
+
+    String PATH_PROPERTY_FILE = "src\\main\\resources\\config.properties";
+    String CHROME_DRIVER = "chromedriver";
+
 }

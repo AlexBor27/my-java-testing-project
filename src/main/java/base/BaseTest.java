@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 @RunWith(JUnitParamsRunner.class)
 public abstract class BaseTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeClass
     public static void beforeClass() {
@@ -23,7 +23,6 @@ public abstract class BaseTest {
     public void setUp(){
         driver = Config.createWebDriver();
         driver.manage().window().maximize();
-        driver.get("https://duckduckgo.com");   // move
     }
 
     @After

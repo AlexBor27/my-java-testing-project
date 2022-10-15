@@ -19,12 +19,11 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    // return Page
-    public void changePage(){
+/*     return Page
+    public changePage(){
+    }*/
 
-    }
-
-    public ShoppingCartPage clickShoppingCart(){
+    public ShoppingCartPage clickItemShoppingCart(){
         shoppingCart.click();
         return new ShoppingCartPage(driver);
     }

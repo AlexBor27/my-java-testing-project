@@ -1,15 +1,12 @@
 package base;
 
-import junitparams.JUnitParamsRunner;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 
-@RunWith(JUnitParamsRunner.class)
 public abstract class BaseTest {
 
     protected WebDriver driver;

@@ -10,19 +10,21 @@ import java.util.Properties;
 
 public class Config implements Constants {
 
-    public static String driver;
+    public static String driverName;
+    public static String pathForDriverInternal;
 
     static {
         getConfig();
     }
 
     public static WebDriver createWebDriver() {
-        switch (driver) {
+        WebDriver webDriver = null;
+        switch (driverName) {
             case CHROME_DRIVER:
-                new ChromeDriver();
+                webDriver = new ChromeDriver();
                 break;
         }
-        return null;
+        return webDriver;
     }
 
     private static void getConfig() {
@@ -32,6 +34,7 @@ public class Config implements Constants {
         } catch (IOException e) {
             System.out.println("Sorry, unable to find config.properties");
         }
-        driver = properties.getProperty("Driver");
+        driverName = properties.getProperty("Driver");
+        pathForDriverInternal = properties.getProperty("PathForDriverInternal");
     }
 }

@@ -1,15 +1,19 @@
 package base;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import utils.Log;
 
 public abstract class BaseTest {
 
     protected WebDriver driver;
+    private Logger logger;
+
+    public BaseTest() {
+        logger = LoggerFactory.getLogger(BaseTest.class);
+    }
 
     @BeforeClass
     public static void beforeClass() {
@@ -20,6 +24,8 @@ public abstract class BaseTest {
     public void setUp(){
         driver = Config.createWebDriver();
         driver.manage().window().maximize();
+
+        logger.info(Log.startMessage());
     }
 
     @After

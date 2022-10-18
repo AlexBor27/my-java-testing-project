@@ -4,7 +4,7 @@ import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import utils.Log;
+import utils.LogHelper;
 
 public abstract class BaseTest {
 
@@ -25,7 +25,7 @@ public abstract class BaseTest {
         driver = Config.createWebDriver();
         driver.manage().window().maximize();
 
-        logger.info(Log.startMessage());
+        logger.info(LogHelper.startMessage());
     }
 
     @After

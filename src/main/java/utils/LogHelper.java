@@ -1,11 +1,11 @@
 package utils;
 
-public class Log {
+public class LogHelper {
 
     public static String startMessage(){
         String startMessage = "************************ START *******************************";
-
         return startMessage;
     }
+
 
 }

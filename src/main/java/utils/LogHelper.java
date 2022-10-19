@@ -7,5 +7,10 @@ public class LogHelper {
         return startMessage;
     }
 
+    public static String finishMessage(){
+        String finishMessage = "************************ END *******************************";
+        return finishMessage;
+    }
+
 
 }

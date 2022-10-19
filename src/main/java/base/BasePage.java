@@ -4,19 +4,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pagecomponents.TopNavigationBar;
 import pages.ShoppingCartPage;
 
 public abstract class BasePage {
 
     protected WebDriver driver;
+    TopNavigationBar topNavigationBar;
+
     @FindBy(xpath = "//*[@id=\"logo\"]/a/img")
     protected WebElement homeLogo;
-    @FindBy(xpath = "//a[@title = 'Shopping Cart']")
-    private WebElement shoppingCart;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        this.topNavigationBar = PageFactory.initElements(driver, TopNavigationBar.class);
     }
 
 /*     return Page
@@ -24,7 +26,7 @@ public abstract class BasePage {
     }*/
 
     public ShoppingCartPage clickItemShoppingCart(){
-        shoppingCart.click();
+        topNavigationBar.goToShoppingCart();
         return new ShoppingCartPage(driver);
     }
 

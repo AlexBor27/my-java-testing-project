@@ -25,7 +25,4 @@ public class ShoppingCartFunctional extends BaseTest implements Constants {
             .clickButtonContinue();
     }
 
-//    void fun(){
-//        ITest
-//    }
 }

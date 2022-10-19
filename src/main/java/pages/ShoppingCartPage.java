@@ -4,6 +4,7 @@ import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.ActionsHelper;
 
 import static org.junit.Assert.assertEquals;
 
@@ -19,7 +20,7 @@ public class ShoppingCartPage extends BasePage{
     }
 
     public HomePage clickButtonContinue(){
-        continueButton.click();
+        ActionsHelper.click(continueButton, driver);
         return new HomePage(driver);
     }
 

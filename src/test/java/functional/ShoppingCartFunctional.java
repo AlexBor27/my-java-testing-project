@@ -21,8 +21,9 @@ public class ShoppingCartFunctional extends BaseTest implements Constants {
 
     @Test
     public void goToShoppingCartPageScenario(){
-        page.clickItemShoppingCart()
-            .clickButtonContinue();
+//        page.clickItemShoppingCart()
+//            .clickButtonContinue();
+        page.clickAllDesctopsPage();
     }
 
 }

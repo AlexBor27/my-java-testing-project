@@ -21,10 +21,6 @@ public abstract class BasePage {
         this.topNavigationBar = PageFactory.initElements(driver, TopNavigationBar.class);
     }
 
-/*     return Page
-    public changePage(){
-    }*/
-
     public ShoppingCartPage clickItemShoppingCart(){
         topNavigationBar.goToShoppingCart();
         return new ShoppingCartPage(driver);

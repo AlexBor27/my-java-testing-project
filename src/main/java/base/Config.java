@@ -32,9 +32,9 @@ public class Config implements Constants {
         try (FileInputStream in = new FileInputStream(PATH_PROPERTY_FILE)) {
             properties.load(in);
         } catch (IOException e) {
-            System.out.println("Sorry, unable to find config.properties");
+            System.out.println(UNABLE_TO_FIND_PROPERTIES);
         }
-        driverName = properties.getProperty("Driver");
-        pathForDriverInternal = properties.getProperty("PathForDriverInternal");
+        driverName = properties.getProperty(DRIVER_TEXT);
+        pathForDriverInternal = properties.getProperty(PART_INTERNAL);
     }
 }

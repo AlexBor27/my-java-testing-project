@@ -45,7 +45,6 @@ public abstract class BaseTest {
     public void setUp(){
         driver = Config.createWebDriver();
         driver.manage().window().maximize();
-
         logger.info(LogHelper.startMessage());
     }
 
@@ -57,6 +56,5 @@ public abstract class BaseTest {
 
     @AfterClass
     public static void afterClass() {
-
     }
 }

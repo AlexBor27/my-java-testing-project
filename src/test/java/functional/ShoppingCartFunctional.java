@@ -8,14 +8,13 @@ import pages.HomePage;
 
 public class ShoppingCartFunctional extends BaseTest implements Constants {
 
-    // to Base UI Test ??? TODO
     private HomePage page;
 
     @Override
     @Before
     public void setUp() {
         super.setUp();
-        driver.get(SITE_URL);   // move TODO
+        driver.get(SITE_URL);
         page = new HomePage(driver);
     }
 
@@ -25,5 +24,4 @@ public class ShoppingCartFunctional extends BaseTest implements Constants {
             .verifyCartEmptyTextExist();
 
     }
-
 }

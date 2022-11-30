@@ -17,6 +17,7 @@ public class Config implements Constants {
         getConfig();
     }
 
+    /** Factory Method*/
     public static WebDriver createWebDriver() {
         WebDriver webDriver = null;
         switch (driverName) {

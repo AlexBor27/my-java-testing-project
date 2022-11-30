@@ -1,5 +1,6 @@
 package base;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +12,8 @@ public abstract class BasePage {
 
     protected WebDriver driver;
     TopNavigationBar topNavigationBar;
+    @Getter
+    private String pageName;
 
     @FindBy(xpath = "//*[@id=\"logo\"]/a/img")
     protected WebElement homeLogo;
@@ -19,6 +22,7 @@ public abstract class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         this.topNavigationBar = PageFactory.initElements(driver, TopNavigationBar.class);
+        pageName = driver.getTitle();
     }
 
     public ShoppingCartPage clickItemShoppingCart(){

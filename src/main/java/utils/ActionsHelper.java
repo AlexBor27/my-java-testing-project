@@ -9,6 +9,7 @@ import java.time.Duration;
 
 public class ActionsHelper {
 
+    /* Waiter*/
     public static void click(WebElement element, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         ExpectedCondition<Boolean> elementIsClickable = arg0 -> {

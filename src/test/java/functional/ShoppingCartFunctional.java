@@ -22,6 +22,6 @@ public class ShoppingCartFunctional extends BaseTest implements Constants {
     public void goToShoppingCartPageScenario(){
         page.clickItemShoppingCart()
             .verifyCartEmptyTextExist();
-
+        // test to revert
     }
 }
